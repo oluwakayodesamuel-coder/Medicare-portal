@@ -1,0 +1,13 @@
+id,patient,doctor,department,date,time,status
+1,John Ade,Dr. James Okon,General Medicine,2026-10-19,09:00,Confirmed
+2,Sarah Bello,Dr. Mary Adebayo,Gynaecology,2026-10-19,10:30,Pending
+3,Amaka Okafor,Dr. Femi Alade,Cardiology,2026-10-19,12:00,Confirmed
+4,Ibrahim Musa,Dr. James Okon,General Medicine,2026-10-20,08:30,Cancelled
+5,Chinedu Eze,Dr. Hauwa Sani,Dental,2026-10-20,11:00,Pending
+6,Zainab Lawal,Dr. Mary Adebayo,Gynaecology,2026-10-20,14:00,Confirmed
+7,Ngozi Nwosu,Dr. Femi Alade,Cardiology,2026-10-21,09:30,Confirmed
+8,Emeka Obi,Dr. Hauwa Sani,Dental,2026-10-21,13:00,Pending
+9,Halima Yusuf,Dr. James Okon,General Medicine,2026-10-22,10:00,Confirmed
+10,Bisi Adewale,Dr. Femi Alade,Cardiology,2026-10-22,15:30,Cancelled
+11,Olumide Coker,Dr. Hauwa Sani,Dental,2026-10-23,09:00,Confirmed
+12,Grace Etim,Dr. Mary Adebayo,Gynaecology,2026-10-23,11:30,Pending
