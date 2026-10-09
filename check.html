@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Medicare Portal · Team Check</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="check/check.css">
+</head>
+<body>
+
+  <!-- ============================================================
+       TEAM CHECK. Open this page to test every part of the portal.
+       It loads the same ten files as index.html and tries each
+       developer's functions with real Medicare data.
+       Nobody edits this page or the check/ folder.
+       ============================================================ -->
+
+  <header class="site-header">
+    <div class="brand">
+      <span class="logo" aria-hidden="true">+</span>
+      <div>
+        <h1>Team Check</h1>
+        <p>Medicare Patient Portal: does every part work?</p>
+      </div>
+    </div>
+    <p class="built-by"><a href="index.html" class="check-back">Open the portal</a></p>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Score</h2>
+      <p class="check-score" id="check-score">Checking...</p>
+      <p class="check-help">Green means that part works. Amber means it is waiting for a teammate's part:
+        ask the leader to merge it, then pull the latest files. Red means something in that file is wrong:
+        read the line under it. Press <b>Check again</b> after you save your file and reload.</p>
+      <p><button type="button" class="btn" onclick="location.reload()">Check again</button></p>
+      <div id="check-errors"></div>
+    </section>
+
+    <section class="card">
+      <h2>Every developer</h2>
+      <div id="check-results" class="check-results"></div>
+    </section>
+  </main>
+
+  <!-- The checker writes into a hidden copy of the portal's sections, so your
+       code finds the same ids it finds in index.html. -->
+  <div hidden aria-hidden="true">
+    <p id="built-by">Built by our pod</p>
+    <span id="total-patients">0</span><span id="active-patients">0</span>
+    <span id="inactive-patients">0</span><span id="total-appointments">0</span>
+    <input id="searchBox" type="text"><p id="search-message"></p>
+    <table><tbody id="patient-list"></tbody></table>
+    <div id="patient-profile"></div>
+    <table><tbody id="appointment-list"></tbody></table>
+    <input id="reg-name" type="text"><input id="reg-age" type="number">
+    <select id="reg-gender"><option value="">Choose...</option><option value="Female">Female</option><option value="Male">Male</option></select>
+    <input id="reg-phone" type="text"><p id="register-message"></p>
+  </div>
+
+  <!-- Catches red errors from the files below, before they load. -->
+  <script src="check/catch.js"></script>
+
+  <script src="js/01-patient-data.js"></script>
+  <script src="js/02-patient-status.js"></script>
+  <script src="js/03-patient-list.js"></script>
+  <script src="js/04-patient-search.js"></script>
+  <script src="js/05-statistics.js"></script>
+  <script src="js/06-appointments.js"></script>
+  <script src="js/07-appointment-status.js"></script>
+  <script src="js/08-register-patient.js"></script>
+  <script src="js/09-patient-profile.js"></script>
+  <script src="js/10-dashboard.js"></script>
+
+  <script src="check/checker.js"></script>
+</body>
+</html>

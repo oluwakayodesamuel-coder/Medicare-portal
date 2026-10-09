@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Medicare Health Centre · Patient Management Portal</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ============================================================
+       MEDICARE HEALTH CENTRE · PATIENT MANAGEMENT PORTAL
+       Owner of this file: Developer 10 (Lead Developer).
+       Every section below has an id. Each developer's JavaScript
+       writes into ONE of these ids. Do not rename an id without
+       telling the whole team: other people's code looks for it.
+       ============================================================ -->
+
+  <header class="site-header">
+    <div class="brand">
+      <span class="logo" aria-hidden="true">+</span>
+      <div>
+        <h1>Medicare Health Centre</h1>
+        <p>Patient Management Portal</p>
+      </div>
+    </div>
+    <!-- Developer 10 writes the team name here -->
+    <p class="built-by" id="built-by">Built by our pod</p>
+  </header>
+
+  <main class="container">
+
+    <!-- DEVELOPER 5 · Patient Statistics -->
+    <section class="card" aria-labelledby="stats-title">
+      <h2 id="stats-title">Today at a glance</h2>
+      <div class="stats">
+        <div class="stat">
+          <span class="stat-label">Total patients</span>
+          <span class="stat-number" id="total-patients">0</span>
+        </div>
+        <div class="stat">
+          <span class="stat-label">Active patients</span>
+          <span class="stat-number" id="active-patients">0</span>
+        </div>
+        <div class="stat">
+          <span class="stat-label">Inactive patients</span>
+          <span class="stat-number" id="inactive-patients">0</span>
+        </div>
+        <div class="stat">
+          <span class="stat-label">Appointments</span>
+          <span class="stat-number" id="total-appointments">0</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="two-columns">
+
+      <!-- DEVELOPER 2 (list) + DEVELOPER 3 (search) -->
+      <section class="card" aria-labelledby="patients-title">
+        <h2 id="patients-title">Patients</h2>
+
+        <!-- DEVELOPER 3 · Patient Search -->
+        <label class="field-label" for="searchBox">Search patient by name</label>
+        <input id="searchBox" type="text" placeholder="e.g. John" oninput="searchPatients()">
+        <p class="message" id="search-message"></p>
+
+        <!-- DEVELOPER 2 · Patient List: rows are written into this tbody -->
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Age</th>
+                <th scope="col">Gender</th>
+                <th scope="col">Status</th>
+                <th scope="col"><span class="sr-only">Profile</span></th>
+              </tr>
+            </thead>
+            <tbody id="patient-list">
+              <tr><td colspan="5" class="empty">No patients to show yet.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- DEVELOPER 9 · Patient Profile -->
+      <section class="card" aria-labelledby="profile-title">
+        <h2 id="profile-title">Patient profile</h2>
+        <div id="patient-profile" aria-live="polite">
+          <p class="empty">Press "View" on a patient to see their profile.</p>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- DEVELOPER 6 (list) + DEVELOPER 7 (status) · Appointments -->
+    <section class="card" aria-labelledby="appointments-title">
+      <h2 id="appointments-title">Upcoming appointments</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Patient</th>
+              <th scope="col">Doctor</th>
+              <th scope="col">Department</th>
+              <th scope="col">Date</th>
+              <th scope="col">Time</th>
+              <th scope="col">Status</th>
+            </tr>
+          </thead>
+          <tbody id="appointment-list">
+            <tr><td colspan="6" class="empty">No appointments to show yet.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- DEVELOPER 8 · Patient Registration -->
+    <section class="card" aria-labelledby="register-title">
+      <h2 id="register-title">Register a new patient</h2>
+      <div class="form-grid">
+        <div>
+          <label class="field-label" for="reg-name">Full name</label>
+          <input id="reg-name" type="text" placeholder="e.g. Kemi Alabi">
+        </div>
+        <div>
+          <label class="field-label" for="reg-age">Age</label>
+          <input id="reg-age" type="number" min="0" max="120" placeholder="e.g. 30">
+        </div>
+        <div>
+          <label class="field-label" for="reg-gender">Gender</label>
+          <select id="reg-gender">
+            <option value="">Choose...</option>
+            <option value="Female">Female</option>
+            <option value="Male">Male</option>
+          </select>
+        </div>
+        <div>
+          <label class="field-label" for="reg-phone">Phone</label>
+          <input id="reg-phone" type="text" placeholder="e.g. 0803 000 0000">
+        </div>
+      </div>
+      <!-- type="button" so the page does not reload when it is pressed -->
+      <button type="button" class="btn" onclick="registerPatient()">Register patient</button>
+      <p class="message" id="register-message" aria-live="polite"></p>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>Medicare Health Centre · Internal staff portal · Data is stored in this page only</p>
+  </footer>
+
+  <!-- ============================================================
+       One file per developer. Plain scripts, loaded in this order,
+       all sharing the same page. Data files come first, the
+       dashboard (which starts everything) comes last.
+       ============================================================ -->
+  <script src="js/01-patient-data.js"></script>
+  <script src="js/02-patient-status.js"></script>
+  <script src="js/03-patient-list.js"></script>
+  <script src="js/04-patient-search.js"></script>
+  <script src="js/05-statistics.js"></script>
+  <script src="js/06-appointments.js"></script>
+  <script src="js/07-appointment-status.js"></script>
+  <script src="js/08-register-patient.js"></script>
+  <script src="js/09-patient-profile.js"></script>
+  <script src="js/10-dashboard.js"></script>
+</body>
+</html>
