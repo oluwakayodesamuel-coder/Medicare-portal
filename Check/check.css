@@ -1,0 +1,24 @@
+/* Team Check page only. */
+.check-score { font-size: 1.6rem; font-weight: 700; margin: 0 0 8px; }
+.check-help { color: #475569; margin: 0 0 12px; line-height: 1.55; }
+.check-back { color: inherit; font-weight: 600; }
+.check-results { display: grid; gap: 12px; }
+.check-dev { border: 1px solid #e2e8f0; border-left: 6px solid #94a3b8; border-radius: 10px; padding: 12px 14px; background: #fff; }
+.check-dev.pass { border-left-color: #16a34a; }
+.check-dev.wait { border-left-color: #d97706; }
+.check-dev.fail { border-left-color: #dc2626; }
+.check-dev h3 { margin: 0 0 4px; font-size: 1.02rem; display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+.check-dev .file { font-family: ui-monospace, Menlo, Consolas, monospace; font-size: .85rem; color: #475569; }
+.check-pill { font-size: .75rem; font-weight: 700; padding: 2px 9px; border-radius: 99px; color: #fff; background: #94a3b8; }
+.pass .check-pill { background: #16a34a; }
+.wait .check-pill { background: #d97706; }
+.fail .check-pill { background: #dc2626; }
+.check-dev ul { margin: 8px 0 0; padding-left: 0; list-style: none; }
+.check-dev li { padding: 3px 0; font-size: .92rem; line-height: 1.45; }
+.check-dev li::before { margin-right: 8px; font-weight: 700; }
+.check-dev li.ok::before { content: "\2713"; color: #16a34a; }
+.check-dev li.no::before { content: "\2717"; color: #dc2626; }
+.check-dev li.hold::before { content: "\2026"; color: #d97706; }
+.check-dev .hint { display: block; color: #64748b; font-size: .85rem; margin-left: 22px; }
+.check-error { background: #fef2f2; border: 1px solid #fecaca; color: #991b1b; border-radius: 10px; padding: 10px 12px; margin-top: 8px; font-size: .92rem; }
+.check-error code { font-family: ui-monospace, Menlo, Consolas, monospace; }
