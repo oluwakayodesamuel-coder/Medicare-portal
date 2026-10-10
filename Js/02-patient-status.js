@@ -20,15 +20,28 @@
 //         (So a typo like "active" in the data still shows as Inactive. Note
 //         that in your documentation if you spot one.)
 function getStatusText(patient) {
-  return patient.status; // <- replace this line with your ternary
+  return patient.status === "Active" ? "Active" : "Inactive"; // <- replace this line with your ternary
 }
+
+
 
 // STEP 2. getStatusClass: use an IF / ELSE.
 //         "Active" -> "status-active", anything else -> "status-inactive".
+
 function getStatusClass(patient) {
-  return ""; // <- replace with your if / else
+    if (patient.status === "Active") {
+      return "status-active";
+  } else {
+      return "status-inactive";
+  }
+  
 }
+
+
 
 // STEP 3. Test in the Console (F12):
 //         getStatusText(patients[0])     -> "Active"
 //         getStatusClass(patients[2])    -> "status-inactive"  (David James)
+
+getStatusText(patients[0]);
+getStatusClass(patients[2]);
