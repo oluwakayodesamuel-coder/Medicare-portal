@@ -10,16 +10,16 @@ conditionals, loops, functions, arrays, array methods, objects and the DOM).
 
 | Role | File | Developer (GitHub username) |
 | --- | --- | --- |
-| 1 · Patient Data | `js/01-patient-data.js` | |
-| 2 · Patient List | `js/03-patient-list.js` | |
-| 3 · Patient Search | `js/04-patient-search.js` | |
-| 4 · Patient Status | `js/02-patient-status.js` | |
-| 5 · Statistics | `js/05-statistics.js` | |
-| 6 · Appointments | `js/06-appointments.js` | |
-| 7 · Appointment Status | `js/07-appointment-status.js` | |
-| 8 · Registration | `js/08-register-patient.js` | |
-| 9 · Patient Profile | `js/09-patient-profile.js` | |
-| 10 · Lead Developer | `js/10-dashboard.js`, `index.html`, `css/style.css` | |
+| 1 · Patient Data | `js/01-patient-data.js` | Virus-dotcom-hub |
+| 2 · Patient List | `js/03-patient-list.js` | Wizzybio |
+| 3 · Patient Search | `js/04-patient-search.js` | faithy555 |
+| 4 · Patient Status | `js/02-patient-status.js` | adelodunsamuel08 |
+| 5 · Statistics | `js/05-statistics.js` | Burnakeen |
+| 6 · Appointments | `js/06-appointments.js` | ksv1-prog |
+| 7 · Appointment Status | `js/07-appointment-status.js` | suleimanqudus81-cloud |
+| 8 · Registration | `js/08-register-patient.js` | innocentmercy124 |
+| 9 · Patient Profile | `js/09-patient-profile.js` | sulaimanabdul139-creator |
+| 10 · Lead Developer | `js/10-dashboard.js`, `index.html`, `css/style.css` | oluwakayodesamuel-coder |
 
 ## How it fits together
 
