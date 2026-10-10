@@ -1,34 +1,28 @@
 /* ==================================================================
    DEVELOPER 5 · PATIENT STATISTICS
-   File: js/05-statistics.js          (you edit ONLY this file)
-
-   YOUR JOB
-   Count the patients and show the numbers at the top of the page, in:
-     #total-patients   #active-patients   #inactive-patients
-   (#total-appointments belongs to Developer 6.)
-
-   WHO USES YOUR WORK
-   Developer 10 calls renderStatistics() when the page starts, and
-   Developer 8 calls it again after registering a patient, so the numbers
-   must always be counted fresh from the `patients` array, never typed in.
-
-   CONCEPTS: loops, variables, conditionals, operators (++ and -)
+   File: Js/05-statistics.js
    ================================================================== */
 
-// STEP 1. countActivePatients(list): start a counter at 0, loop over list,
-//         and add 1 (counter++) for every patient whose status is "Active".
-//         Return the counter.
+// Count the number of active patients
 function countActivePatients(list) {
-  return 0; // <- replace with your loop
+  let counter = 0;
+
+  for (let i = 0; i < list.length; i++) {
+    if (list[i].status === "Active") {
+      counter++;
+    }
+  }
+
+  return counter;
 }
 
-// STEP 2. renderStatistics():
-//         total    = patients.length
-//         active   = countActivePatients(patients)
-//         inactive = total - active
-//         Put each number in its box, for example:
-//         document.getElementById("total-patients").textContent = total;
+// Display total, active, and inactive patients
 function renderStatistics() {
-}
+  const total = patients.length;
+  const active = countActivePatients(patients);
+  const inactive = total - active;
 
-// STEP 3. Check: with all 20 patients the page shows 20, 15 and 5.
+  document.getElementById("total-patients").textContent = total;
+  document.getElementById("active-patients").textContent = active;
+  document.getElementById("inactive-patients").textContent = inactive;
+}
