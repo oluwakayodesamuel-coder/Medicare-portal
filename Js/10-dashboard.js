@@ -12,14 +12,14 @@
    ================================================================== */
 
 function startDashboard() {
-  // STEP 1. Put your pod's name in the header:
-  //   document.getElementById("built-by").textContent = "Built by Pod ...";
+  // STEP 1: Display your pod name in the header
+  document.getElementById("built-by").textContent =
+    "Built by Cascade Pod";
 
-  // STEP 2. Start every section with the full data:
-  //   renderStatistics();
-  //   renderPatientList(patients);
-  //   renderAppointments(appointments);
-
+  // STEP 2: Start every section with the full data
+  renderStatistics();
+  renderPatientList(patients);
+  renderAppointments(appointments);
   // STEP 3. After every merge, open the page, press F12 > Console.
   //   Red text means something broke: the file name and line number tell you
   //   whose part it is. Send them the message in the pod room.
