@@ -4,7 +4,7 @@ A browser-based patient portal built by a Webbo3 pod of ten developers, using
 only HTML, CSS and JavaScript fundamentals (variables, data types, operators,
 conditionals, loops, functions, arrays, array methods, objects and the DOM).
 
-**Live site:** _the leader adds the GitHub Pages link here_
+**Live site:** [_Medicare-portal-live_](https://oluwakayodesamuel-coder.github.io/Medicare-portal/)
 
 ## The team
 
