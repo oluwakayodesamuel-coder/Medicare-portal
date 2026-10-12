@@ -22,14 +22,33 @@
 //   "Cancelled" -> "Appointment cancelled"
 //   anything else -> "Status unknown, call the front desk"
 function getAppointmentMessage(status) {
-  return ""; // <- replace
+  if (status === "Confirmed") {
+    return "Appointment confirmed";
+  }
+  if(status === "Pending") {
+    return "Waiting for confirmation";
+  }
+  if(status === "Cancelled") {
+    return "Appointment cancelled";
+  }
+  return "Status unknown, call the front desk"; // <- replace
 }
 
 // STEP 2. getAppointmentClass(status), the same way:
 //   "Confirmed" -> "status-confirmed", "Pending" -> "status-pending",
 //   "Cancelled" -> "status-cancelled", anything else -> ""
 function getAppointmentClass(status) {
-  return ""; // <- replace
+  if (status === "Confirmed") {
+    return "status-confirmed";
+  }
+  if(status === "Pending") {
+    return "status-pending";
+  }
+  if(status === "Cancelled") {
+    return "status-cancelled";
+  }
+  return "status-unknown"; // <- replace
 }
 
 // STEP 3. Test in the Console: getAppointmentMessage("Cancelled")
+//getAppointmentClass("Cancelled")
