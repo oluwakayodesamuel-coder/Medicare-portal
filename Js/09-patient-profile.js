@@ -26,6 +26,18 @@
 //       </dl>
 //     </div>`;
 function showPatient(patient) {
+  document.getElementById("patient-profile").innerHTML = `
+    <div class="profile">
+      <h3>${patient.name}</h3>
+      <dl>
+        <dt>Patient ID</dt><dd>#${patient.id}</dd>
+        <dt>Age</dt><dd>${patient.age}</dd>
+        <dt>Gender</dt><dd>${patient.gender}</dd>
+        <dt>Phone</dt><dd>${patient.phone}</dd>
+        <dt>Blood Group</dt><dd>${patient.bloodGroup}</dd>
+        <dt>Status</dt><dd><span class="badge ${getStatusClass(patient)}">${getStatusText(patient)}</span></dd>
+      </dl>
+    </div>`;
 }
 
 // STEP 2. showPatientById(id): find the patient with that id and show them.
@@ -33,4 +45,10 @@ function showPatient(patient) {
 //   If no patient is found (patient === undefined), write
 //   "Patient not found." into #patient-profile. Otherwise showPatient(patient).
 function showPatientById(id) {
+  const patient = patients.find(function (p) { return p.id === id; });
+  if (patient === undefined) {
+    document.getElementById("patient-profile").textContent = "Patient not found.";
+  } else {
+    showPatient(patient);
+  }
 }
