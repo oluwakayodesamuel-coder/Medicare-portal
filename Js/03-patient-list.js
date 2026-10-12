@@ -19,24 +19,44 @@
    CONCEPTS: DOM, loops, arrays, objects, functions
    ================================================================== */
 
+
 function renderPatientList(list) {
-  // STEP 1. Find the table body:
-  //         const tableBody = document.getElementById("patient-list");
+  // STEP 1: Find the table body
+  const tableBody = document.getElementById("patient-list");
 
-  // STEP 2. Make an empty text variable to collect rows:  let rows = "";
+  // STEP 2: Create an empty string to collect rows
+  let rows = "";
 
-  // STEP 3. Loop over list (for (const patient of list) { ... }) and add one row:
-  //   rows += `<tr>
-  //     <td>${patient.name}</td>
-  //     <td>${patient.age}</td>
-  //     <td>${patient.gender}</td>
-  //     <td><span class="badge ${getStatusClass(patient)}">${getStatusText(patient)}</span></td>
-  //     <td><button type="button" class="btn-small" onclick="showPatientById(${patient.id})">View</button></td>
-  //   </tr>`;
-  //   (The View button calls Developer 9's function with this patient's id.)
+  // STEP 3: Loop through the list of patients
+  for (const patient of list) {
+    rows += `<tr>
+      <td>${patient.name}</td>
+      <td>${patient.age}</td>
+      <td>${patient.gender}</td>
+      <td>
+        <span class="badge ${getStatusClass(patient)}">
+          ${getStatusText(patient)}
+        </span>
+      </td>
+      <td>
+        <button
+          type="button"
+          class="btn-small"
+          onclick="showPatientById(${patient.id})">
+          View
+        </button>
+      </td>
+    </tr>`;
+  }
 
-  // STEP 4. If list.length === 0, set rows to one row that says "No patients found."
-  //         <tr><td colspan="5" class="empty">No patients found.</td></tr>
+  // STEP 4: Handle an empty list
+  if (list.length === 0) {
+    rows = `<tr>
+      <td colspan="5" class="empty">No patients found.</td>
+    </tr>`;
+  }
 
-  // STEP 5. Put the rows on the page:  tableBody.innerHTML = rows;
+  // STEP 5: Display the rows on the page
+  tableBody.innerHTML = rows;
 }
+
