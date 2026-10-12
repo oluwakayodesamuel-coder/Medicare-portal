@@ -51,4 +51,4 @@ function getAppointmentClass(status) {
 }
 
 // STEP 3. Test in the Console: getAppointmentMessage("Cancelled")
-//getAppointmentClass("Cancelled")
+getAppointmentClass("Cancelled")
