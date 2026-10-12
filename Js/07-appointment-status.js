@@ -24,14 +24,13 @@
 function getAppointmentMessage(status) {
   if (status === "Confirmed") {
     return "Appointment confirmed";
-  }
-  if(status === "Pending") {
+  } else if (status === "Pending") {
     return "Waiting for confirmation";
-  }
-  if(status === "Cancelled") {
+  } else if (status === "Cancelled") {
     return "Appointment cancelled";
+  } else {
+    return "Status unknown, call the front desk";
   }
-  return "Status unknown, call the front desk"; // <- replace
 }
 
 // STEP 2. getAppointmentClass(status), the same way:
@@ -40,14 +39,13 @@ function getAppointmentMessage(status) {
 function getAppointmentClass(status) {
   if (status === "Confirmed") {
     return "status-confirmed";
-  }
-  if(status === "Pending") {
+  } else if (status === "Pending") {
     return "status-pending";
-  }
-  if(status === "Cancelled") {
+  } else if (status === "Cancelled") {
     return "status-cancelled";
+  } else {
+    return "";
   }
-  return ""; // <- replace
 }
 
 // STEP 3. Test in the Console: getAppointmentMessage("Cancelled")
