@@ -47,7 +47,7 @@ function getAppointmentClass(status) {
   if(status === "Cancelled") {
     return "status-cancelled";
   }
-  return "status-unknown"; // <- replace
+  return ""; // <- replace
 }
 
 // STEP 3. Test in the Console: getAppointmentMessage("Cancelled")
